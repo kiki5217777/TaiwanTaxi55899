@@ -47,7 +47,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 #define ALERT_CANCEL_ORDER  10
 #define ALERT_MAKE_CALL     11
-#define ALERT_AUTOBUTTON_UI    12//edited by kiki Huang 2013.12.31 
+#define ALERT_AUTOBUTTON_UI    12//edited by kiki Huang 2013.12.31  QQQQQQQQQ
 #define ALERT_PUSH          13//edited by kiki Huang 2014.01.08
 #define ALERT_PUSH_URL     14
 
