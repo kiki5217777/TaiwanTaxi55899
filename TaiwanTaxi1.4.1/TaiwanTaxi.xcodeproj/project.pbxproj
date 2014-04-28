@@ -70,10 +70,6 @@
 		771892B118A229F400347157 /* PEResizeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A174D4188014BB00A156BB /* PEResizeControl.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		772EB9B518A237FD00038575 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A174C8187FD77F00A156BB /* left.png */; };
 		772EB9B618A2380000038575 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A174C9187FD77F00A156BB /* right.png */; };
-		77307EE618A2505B002A8ED7 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 77307EE218A2505B002A8ED7 /* CloseButton.png */; };
-		77307EE718A2505B002A8ED7 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 77307EE218A2505B002A8ED7 /* CloseButton.png */; };
-		77307EE818A2505B002A8ED7 /* libTWMTAMediaView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77307EE318A2505B002A8ED7 /* libTWMTAMediaView.a */; };
-		77307EEA18A26169002A8ED7 /* libTWMTAMediaView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77307EE318A2505B002A8ED7 /* libTWMTAMediaView.a */; };
 		77515E4518712033004D7699 /* AutoButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77515E4418712033004D7699 /* AutoButtonManager.m */; };
 		77515E4818712085004D7699 /* AutoButtonArrayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 77515E4718712085004D7699 /* AutoButtonArrayManager.m */; };
 		775B21AF18A22AF700BA5184 /* PEResizeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A174D4188014BB00A156BB /* PEResizeControl.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -179,6 +175,10 @@
 		77A51C7218614B4B0004ABB9 /* select_long_1218.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A51C6F18614B4B0004ABB9 /* select_long_1218.png */; };
 		77A51C7318614B4B0004ABB9 /* select_short_1218.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A51C7018614B4B0004ABB9 /* select_short_1218.png */; };
 		77A6A263185E999900A81C9C /* CustomAlertViewWithAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6A262185E999900A81C9C /* CustomAlertViewWithAD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		77AC6B79190E4F87008965A5 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 77AC6B75190E4F87008965A5 /* CloseButton.png */; };
+		77AC6B7A190E4F87008965A5 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 77AC6B75190E4F87008965A5 /* CloseButton.png */; };
+		77AC6B7B190E4F87008965A5 /* libTWMTAMediaView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AC6B76190E4F87008965A5 /* libTWMTAMediaView.a */; };
+		77AC6B7C190E4F88008965A5 /* libTWMTAMediaView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AC6B76190E4F87008965A5 /* libTWMTAMediaView.a */; };
 		77B35FD61863007700FB13F6 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B35FCD1863007700FB13F6 /* FMDatabase.m */; };
 		77B35FD71863007700FB13F6 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B35FCF1863007700FB13F6 /* FMDatabaseAdditions.m */; };
 		77B35FD81863007700FB13F6 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B35FD11863007700FB13F6 /* FMDatabasePool.m */; };
@@ -1381,10 +1381,6 @@
 		753E1E3A17F2BAF600186E72 /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
 		77167E5A1887ED0D00DD3C5B /* SVPlayWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPlayWebViewController.h; sourceTree = "<group>"; };
 		77167E5B1887ED0D00DD3C5B /* SVPlayWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVPlayWebViewController.m; sourceTree = "<group>"; };
-		77307EE218A2505B002A8ED7 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
-		77307EE318A2505B002A8ED7 /* libTWMTAMediaView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTWMTAMediaView.a; sourceTree = "<group>"; };
-		77307EE418A2505B002A8ED7 /* TWMTAMediaInterstitialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMTAMediaInterstitialView.h; sourceTree = "<group>"; };
-		77307EE518A2505B002A8ED7 /* TWMTAMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMTAMediaView.h; sourceTree = "<group>"; };
 		77515E4318712033004D7699 /* AutoButtonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoButtonManager.h; sourceTree = "<group>"; };
 		77515E4418712033004D7699 /* AutoButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AutoButtonManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		77515E4618712085004D7699 /* AutoButtonArrayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoButtonArrayManager.h; sourceTree = "<group>"; };
@@ -1455,6 +1451,10 @@
 		77A51C7018614B4B0004ABB9 /* select_short_1218.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_short_1218.png; sourceTree = "<group>"; };
 		77A6A261185E999900A81C9C /* CustomAlertViewWithAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAlertViewWithAD.h; sourceTree = "<group>"; };
 		77A6A262185E999900A81C9C /* CustomAlertViewWithAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAlertViewWithAD.m; sourceTree = "<group>"; };
+		77AC6B75190E4F87008965A5 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
+		77AC6B76190E4F87008965A5 /* libTWMTAMediaView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTWMTAMediaView.a; sourceTree = "<group>"; };
+		77AC6B77190E4F87008965A5 /* TWMTAMediaInterstitialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMTAMediaInterstitialView.h; sourceTree = "<group>"; };
+		77AC6B78190E4F87008965A5 /* TWMTAMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMTAMediaView.h; sourceTree = "<group>"; };
 		77B35FCC1863007700FB13F6 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		77B35FCD1863007700FB13F6 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		77B35FCE1863007700FB13F6 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -1846,7 +1846,7 @@
 				9665A9841627E538007A4DEE /* AdSupport.framework in Frameworks */,
 				9665A9811627E52E007A4DEE /* Accounts.framework in Frameworks */,
 				9697D12215DC1A6400DFAB31 /* libz.dylib in Frameworks */,
-				77307EE818A2505B002A8ED7 /* libTWMTAMediaView.a in Frameworks */,
+				77AC6B7B190E4F87008965A5 /* libTWMTAMediaView.a in Frameworks */,
 				9600EE3315D421F6008B49F8 /* MessageUI.framework in Frameworks */,
 				9656D6D217E3774900EF6366 /* libGoogleAnalytics.a in Frameworks */,
 				9608DB5515CA10D600DB705A /* AddressBookUI.framework in Frameworks */,
@@ -1927,9 +1927,9 @@
 				9656D6B417E3714F00EF6366 /* AddressBook.framework in Frameworks */,
 				9674E14A16F85BF9003F4917 /* QuartzCore.framework in Frameworks */,
 				9656D6D317E3774900EF6366 /* libGoogleAnalytics.a in Frameworks */,
+				77AC6B7C190E4F88008965A5 /* libTWMTAMediaView.a in Frameworks */,
 				9674E14B16F85BF9003F4917 /* UIKit.framework in Frameworks */,
 				9656D6C617E3716400EF6366 /* EventKit.framework in Frameworks */,
-				77307EEA18A26169002A8ED7 /* libTWMTAMediaView.a in Frameworks */,
 				9674E14C16F85BF9003F4917 /* Foundation.framework in Frameworks */,
 				9656D6CC17E3716B00EF6366 /* Security.framework in Frameworks */,
 				9656D6C317E3716100EF6366 /* CoreMedia.framework in Frameworks */,
@@ -2101,17 +2101,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		77307EE118A2505B002A8ED7 /* TWMTAMediaView_sit_1.6.0 */ = {
-			isa = PBXGroup;
-			children = (
-				77307EE218A2505B002A8ED7 /* CloseButton.png */,
-				77307EE318A2505B002A8ED7 /* libTWMTAMediaView.a */,
-				77307EE418A2505B002A8ED7 /* TWMTAMediaInterstitialView.h */,
-				77307EE518A2505B002A8ED7 /* TWMTAMediaView.h */,
-			);
-			path = TWMTAMediaView_sit_1.6.0;
-			sourceTree = "<group>";
-		};
 		7771A52418A8B4AD00FF6298 /* 20140120MenuButtons */ = {
 			isa = PBXGroup;
 			children = (
@@ -2247,6 +2236,17 @@
 				77A39FFF187557E0006D4040 /* porfile_pic_default.png */,
 			);
 			path = HomeMenu;
+			sourceTree = "<group>";
+		};
+		77AC6B74190E4F87008965A5 /* TWMTAMediaView_sit_1.6.4 */ = {
+			isa = PBXGroup;
+			children = (
+				77AC6B75190E4F87008965A5 /* CloseButton.png */,
+				77AC6B76190E4F87008965A5 /* libTWMTAMediaView.a */,
+				77AC6B77190E4F87008965A5 /* TWMTAMediaInterstitialView.h */,
+				77AC6B78190E4F87008965A5 /* TWMTAMediaView.h */,
+			);
+			path = TWMTAMediaView_sit_1.6.4;
 			sourceTree = "<group>";
 		};
 		77B35FCB1863007700FB13F6 /* FMDBSrc */ = {
@@ -2752,7 +2752,7 @@
 		96CA723515BFDA900011E6F0 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				77307EE118A2505B002A8ED7 /* TWMTAMediaView_sit_1.6.0 */,
+				77AC6B74190E4F87008965A5 /* TWMTAMediaView_sit_1.6.4 */,
 				77A174CC188014BB00A156BB /* PEPhotoCropEditor */,
 				77B35FCB1863007700FB13F6 /* FMDBSrc */,
 				965522D017F091D40081B5D5 /* CustomIOS7AlertView */,
@@ -3110,6 +3110,7 @@
 				96CA71E815BFA5DB0011E6F0 /* blueLongBar.png in Resources */,
 				7771A53818A8B4AD00FF6298 /* menuButton0.png in Resources */,
 				96CA71E915BFA5DB0011E6F0 /* blueLongBar@2x.png in Resources */,
+				77AC6B79190E4F87008965A5 /* CloseButton.png in Resources */,
 				7795E4B9186A718D00E65154 /* Precautions.txt in Resources */,
 				96CA71EA15BFA5DB0011E6F0 /* blueShortBar.png in Resources */,
 				96CA71EB15BFA5DB0011E6F0 /* blueShortBar@2x.png in Resources */,
@@ -3253,7 +3254,6 @@
 				9665A9B11628701C007A4DEE /* tw_regions.plist in Resources */,
 				7771A54218A8B4AD00FF6298 /* menuButton5.png in Resources */,
 				96942A061688C5E000FD9378 /* fail.wav in Resources */,
-				77307EE618A2505B002A8ED7 /* CloseButton.png in Resources */,
 				77A174CB187FD77F00A156BB /* right.png in Resources */,
 				96942A071688C5E000FD9378 /* success.wav in Resources */,
 				96942A0A1688C6E400FD9378 /* bonus_banner@2x.png in Resources */,
@@ -3492,6 +3492,7 @@
 				9674E16116F85BF9003F4917 /* RelieveViewController.xib in Resources */,
 				7771A53918A8B4AD00FF6298 /* menuButton0.png in Resources */,
 				9674E16216F85BF9003F4917 /* FailViewController.xib in Resources */,
+				77AC6B7A190E4F87008965A5 /* CloseButton.png in Resources */,
 				9674E16316F85BF9003F4917 /* EditMemberViewController.xib in Resources */,
 				9674E16416F85BF9003F4917 /* AddressCell.xib in Resources */,
 				9674E16516F85BF9003F4917 /* areaSelector.png in Resources */,
@@ -3603,7 +3604,6 @@
 				964540EA17E53B7B00D880D1 /* me_large@2x.png in Resources */,
 				9674E1BC16F85BF9003F4917 /* searchCar.png in Resources */,
 				9674E1BD16F85BF9003F4917 /* searchCar@2x.png in Resources */,
-				77307EE718A2505B002A8ED7 /* CloseButton.png in Resources */,
 				9674E1BE16F85BF9003F4917 /* SVProgressHUD.bundle in Resources */,
 				9674E1BF16F85BF9003F4917 /* test_orders.plist in Resources */,
 				9674E1C016F85BF9003F4917 /* car00.png in Resources */,
@@ -4451,6 +4451,7 @@
 					"\"$(SRCROOT)/Library/VponAd\"",
 					"\"$(SRCROOT)/Library/Google Analytics SDK\"",
 					"\"$(SRCROOT)/Library/TWMTAMediaView_sit_1.6.0\"",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/TWMTAMediaView_sit_1.6.4",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -4491,6 +4492,7 @@
 					"\"$(SRCROOT)/Library/VponAd\"",
 					"\"$(SRCROOT)/Library/Google Analytics SDK\"",
 					"\"$(SRCROOT)/Library/TWMTAMediaView_sit_1.6.0\"",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/TWMTAMediaView_sit_1.6.4",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -4673,9 +4675,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Library/VponAd",
-					"$(SRCROOT)/Library/Google\\ Analytics\\ SDK",
-					"$(SRCROOT)/Library/TWMTAMediaView_sit_1.6.0",
+					"\"$(SRCROOT)/Library/VponAd\"",
+					"\"$(SRCROOT)/Library/Google Analytics SDK\"",
+					"\"$(SRCROOT)/Library/TWMTAMediaView_sit_1.6.4\"",
+					"\"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/TWMTAMediaView_sit_1.6.4\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -4711,9 +4714,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Library/VponAd",
-					"$(SRCROOT)/Library/Google\\ Analytics\\ SDK",
-					"$(SRCROOT)/Library/TWMTAMediaView_sit_1.6.0",
+					"\"$(SRCROOT)/Library/VponAd\"",
+					"\"$(SRCROOT)/Library/Google Analytics SDK\"",
+					"\"$(SRCROOT)/Library/TWMTAMediaView_sit_1.6.4\"",
+					"\"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/TWMTAMediaView_sit_1.6.4\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -4749,9 +4753,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Library/VponAd",
-					"$(SRCROOT)/Library/Google\\ Analytics\\ SDK",
-					"$(SRCROOT)/Library/TWMTAMediaView_sit_1.6.0",
+					"\"$(SRCROOT)/Library/VponAd\"",
+					"\"$(SRCROOT)/Library/Google Analytics SDK\"",
+					"\"$(SRCROOT)/Library/TWMTAMediaView_sit_1.6.4\"",
+					"\"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/TWMTAMediaView_sit_1.6.4\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -4828,6 +4833,7 @@
 					"\"$(SRCROOT)/Library/VponAd\"",
 					"\"$(SRCROOT)/Library/Google Analytics SDK\"",
 					"\"$(SRCROOT)/Library/TWMTAMediaView_sit_1.6.0\"",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/TWMTAMediaView_sit_1.6.4",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -4863,9 +4869,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Library/VponAd",
-					"$(SRCROOT)/Library/Google\\ Analytics\\ SDK",
-					"$(SRCROOT)/Library/TWMTAMediaView_sit_1.6.0",
+					"\"$(SRCROOT)/Library/VponAd\"",
+					"\"$(SRCROOT)/Library/Google Analytics SDK\"",
+					"\"$(SRCROOT)/Library/TWMTAMediaView_sit_1.6.4\"",
+					"\"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/TWMTAMediaView_sit_1.6.4\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -4943,6 +4950,7 @@
 					"\"$(SRCROOT)/Library/VponAd\"",
 					"\"$(SRCROOT)/Library/Google Analytics SDK\"",
 					"\"$(SRCROOT)/Library/TWMTAMediaView_sit_1.6.0\"",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/TWMTAMediaView_sit_1.6.4",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
