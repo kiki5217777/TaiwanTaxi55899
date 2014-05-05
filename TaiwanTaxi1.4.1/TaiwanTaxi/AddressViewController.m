@@ -968,10 +968,13 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     
     self.sendBtn.enabled = NO;
     
-    if(self.streetTextField.text.length == 0 || self.streetNumberTextField.text.length == 0 ||
-       [self.zoneLabel.text isEqualToString:DEFAULT_ZONE_VALUE] == YES)
+    if(self.streetTextField.text.length == 0 || self.streetNumberTextField.text.length == 0 ||[self.streetNumberTextField.text isEqualToString:@"0"]||[self.zoneLabel.text isEqualToString:DEFAULT_ZONE_VALUE] == YES)
     {
-        [SVProgressHUD showErrorWithStatus:@"地址不完整"];
+        if ([self.streetNumberTextField.text isEqualToString:@"0"])
+            [SVProgressHUD showErrorWithStatus:@"門牌號碼不能為0"];
+        else
+            [SVProgressHUD showErrorWithStatus:@"地址不完整"];
+        
         self.sendBtn.enabled = YES;
         return;
     }

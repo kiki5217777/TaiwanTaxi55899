@@ -569,7 +569,8 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 //    NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"sd_Directory.db"];
 //
 //   [[NSFileManager defaultManager]removeItemAtPath:path error:nil];
-    
+    UIButton *button = (UIButton *)sender;
+    button.enabled = NO;
     [SVProgressHUD showWithStatus:@"準備中"];
     
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"freewayDBisDownload_NewFileName"]) {
@@ -583,7 +584,8 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     
     
     [self.manager taxiFreeway:^(id JSON) {
-
+        
+        button.enabled = YES;
         NSLog(@"%@",JSON);
         
         if (JSON !=nil && JSON !=[NSNull null]) {
@@ -640,6 +642,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         
     } failure:^(NSString *errorMessage, NSError *error) {
         if (error) {
+            button.enabled = YES;
             [SVProgressHUD showErrorWithStatus:@"伺服器發生錯誤，資料庫版本更新失敗"];
             [self pushFreewayViewController];
             NSLog(@"web failure%@",error);
@@ -847,11 +850,15 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 - (IBAction)taxiPlayButtonPressed:(id)sender {
     
+    UIButton *button = (UIButton *)sender;
+    button.enabled = NO;
+    
     [SVProgressHUD showWithStatus:@"準備中"];
     
     [self.manager taxiPlayToken:self.manager.userID
                         success:^(id JSON) {
-                            
+        
+        button.enabled=YES;
         NSLog(@"paly %@",JSON);
                             
         if (JSON!=[NSNull null] && JSON!=nil && [[JSON objectForKey:@"ok"] intValue] && [JSON objectForKey:JSON_API_KEY_rsp]!=[NSNull null] && [JSON objectForKey:JSON_API_KEY_rsp]!=nil)
@@ -897,6 +904,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         }
     }
     failure:^(NSString *errorMessage, NSError *error) {
+        button.enabled=YES;
         [SVProgressHUD showErrorWithStatus:@"伺服器發生錯誤"];
         NSLog(@"web failure%@",error);
         
@@ -905,6 +913,9 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 }
 
 - (IBAction)taxiTicketButtonPressed:(id)sender {
+    
+    UIButton *button = (UIButton *)sender;
+    button.enabled = NO;
     
     NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULT_KEY_BACKEND_URLS]);
     NSString *baseUrl;
@@ -987,6 +998,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     
     [self.manager taxiTicketTokenWithCookie:[NSString stringWithFormat:@"%@api/phone/getTICKET_TOKEN.aspx",baseUrl ] para:parameter success:^(id JSON) {
         
+        button.enabled = YES;
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:JSON options:kNilOptions error:nil];
         NSLog(@"ticket success %@",json);
         
@@ -1049,6 +1061,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
                 [SVProgressHUD showErrorWithStatus:@"伺服器發生錯誤"];
         }
     } failure:^(NSString *errorMessage, NSError *error) {
+        button.enabled = YES;
         NSLog(@"ticket error %@",error);
         [SVProgressHUD showErrorWithStatus:@"伺服器發生錯誤"];
     }];
