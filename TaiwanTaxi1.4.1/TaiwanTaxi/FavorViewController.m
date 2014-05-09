@@ -297,7 +297,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
             cm5cell.textLabel.minimumFontSize = 10.0f;
             cm5cell.textLabel.adjustsFontSizeToFitWidth = YES;
             cm5cell.textLabel.text = [cm5AddressArray objectAtIndex:indexPath.row];
-            cm5cell.detailTextLabel.text = [cm5AddressArray objectAtIndex:indexPath.row];
+//            cm5cell.detailTextLabel.text = [cm5AddressArray objectAtIndex:indexPath.row];
         }
         return cm5cell;
     }

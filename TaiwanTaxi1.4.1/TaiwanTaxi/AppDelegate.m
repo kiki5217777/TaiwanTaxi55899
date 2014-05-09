@@ -19,6 +19,7 @@
 
 #import "NSData+helper.h"
 #import "TaxiManager.h"
+#import "OrderManager.h"
 #import "Constants.h"
 #import "ServiceManager.h"
 
@@ -37,6 +38,8 @@
 }
 
 @property (nonatomic, retain) NSString *remoteNotifMsg;
+@property (nonatomic, retain) TaxiManager *manager;
+@property (nonatomic, retain) OrderManager *orderManager;
 @end
 
 
@@ -77,7 +80,12 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     isalertShow = false;
-    NSLog(@"%@", NSStringFromCGRect(self.window.frame));
+    self.manager = [TaxiManager sharedInstance];
+    self.orderManager = [OrderManager sharedInstance];
+    
+    // ------------------ Save old coredata to new coredata attribute ------------------
+    if (self.manager.currentAppMode == AppModeTWTaxi)
+        [self SaveFacePictureToCoreData];
     
     //  ---------- Override point for customization after application launch. ----------
     
@@ -659,4 +667,37 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     NSLog(@"stringToDate %@", [formatter dateFromString:str]);
     return [formatter dateFromString:str];
 }
+
+-(void)SaveFacePictureToCoreData{
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filePathSrc = [documentsDirectory stringByAppendingPathComponent:@"facePicture.png"];
+    NSString *filePathDst = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",self.manager.userID]];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    if ([manager fileExistsAtPath:filePathSrc]) {
+        
+        NSError *error = nil;
+        [manager moveItemAtPath:filePathSrc toPath:filePathDst error:&error];
+        if (error)
+            NSLog(@"There is an Error: %@", error);
+        else
+            [self addData:[NSString stringWithFormat:@"%@.jpg",self.manager.userID]];
+    }
+    else
+        NSLog(@"File facePicture.png doesn't exists");
+}
+- (void)addData:(NSString *)path
+{
+    FaceInfo *p = nil;
+    
+    p = [self.orderManager createFaceInfo];
+    
+    p.userID = self.manager.userID;
+    p.picturePath = path;
+    
+    [self.orderManager save];
+    NSLog(@"%@:%@",p.userID,p.picturePath);
+}
+
 @end
