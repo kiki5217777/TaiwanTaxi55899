@@ -97,7 +97,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     [super viewDidLoad];
     
     // -------------------- view --------------------
-    
+    isCallTaxiLocationTimer = NO;
     if(self.manager.currentAppMode == AppModeCityTaxi)
     {
         self.bonusBtn.hidden = YES;
@@ -252,12 +252,32 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     homePresent = true;
 }
 -(void) removeTaxiAnnotationWithNotification:(NSNotification *)notification{
+    if (!isCallTaxiLocationTimer){
+        if ([taxiLoctionTimer isValid])
+            [taxiLoctionTimer invalidate];
+    }else
+        NSLog(@"timer has fired");
     
-      [self.myMapView removeAnnotation:self.taxiAnnotation];
+    if ([[self.myMapView annotations] count]) {
+        
+        for (id <MKAnnotation> ann in [self.myMapView annotations]) {
+            if ([ann isKindOfClass:[TaxiAnnotation class]]) {
+                [self.myMapView removeAnnotation:self.taxiAnnotation];
+                break;
+            }
+        }
+    }
 }
 -(void) removeTaxiAnnotation{
-    if(self.taxiAnnotation){
-        [self.myMapView removeAnnotation:self.taxiAnnotation];
+    
+    if ([[self.myMapView annotations] count]) {
+        
+        for (id <MKAnnotation> ann in [self.myMapView annotations]) {
+            if ([ann isKindOfClass:[TaxiAnnotation class]]) {
+                [self.myMapView removeAnnotation:self.taxiAnnotation];
+                break;
+            }
+        }
     }
 }
 #pragma mark - MKMapViewDelegate
@@ -638,6 +658,8 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 -(void)resetTaxiLocation{
     
+    isCallTaxiLocationTimer = NO;
+    
     if(self.manager.currentOrderID.length == 0)
     {
         return;
@@ -666,10 +688,12 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
             MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(taxiCoordinate, 2000, 2000);
             [self.myMapView setRegion:region animated:YES];
             
-            
+            taxiLoctionTimer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(resetTaxiLocation) userInfo:nil repeats:NO];
+            isCallTaxiLocationTimer = YES;
+            /*
             [self performSelector:@selector(resetTaxiLocation)
                        withObject:nil
-                       afterDelay:60.0];
+                       afterDelay:60.0];*/
             
             //        int64_t delayInSeconds = TAXI_ANNOTATION_DURATION;
             //        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);

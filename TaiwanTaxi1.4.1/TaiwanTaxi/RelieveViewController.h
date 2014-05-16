@@ -26,6 +26,8 @@ typedef enum{
     BOOL inRelieve;
     BOOL inBackground;
     BOOL homePresent;
+    BOOL isCallTaxiLocationTimer;
+    NSTimer *taxiLoctionTimer;
 }
 
 @property (retain, nonatomic) IBOutlet UIView *contentView;
