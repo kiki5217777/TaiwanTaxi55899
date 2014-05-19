@@ -200,6 +200,12 @@
 		77D587BB18A2392F001964F4 /* 取消叫車按鈕-藍@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 779F643E18602816001322CC /* 取消叫車按鈕-藍@2x.png */; };
 		77D587BC18A23DDF001964F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96AD31C617E9AC47001EB4C7 /* Images.xcassets */; };
 		77E29B5C18A22C2500875EEE /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 779889451867065A002D04CB /* IntroductionViewController.m */; };
+		77FC0C6E1929EBE9009195D3 /* CityTaxi AppStore-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77FC0C6B1929EBE9009195D3 /* CityTaxi AppStore-Info.plist */; };
+		77FC0C6F1929EBE9009195D3 /* CityTaxi AppStore-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77FC0C6B1929EBE9009195D3 /* CityTaxi AppStore-Info.plist */; };
+		77FC0C701929EBE9009195D3 /* citytaxi dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77FC0C6C1929EBE9009195D3 /* citytaxi dev-Info.plist */; };
+		77FC0C711929EBE9009195D3 /* citytaxi dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77FC0C6C1929EBE9009195D3 /* citytaxi dev-Info.plist */; };
+		77FC0C721929EBE9009195D3 /* TaiwanTaxi AppStore-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77FC0C6D1929EBE9009195D3 /* TaiwanTaxi AppStore-Info.plist */; };
+		77FC0C731929EBE9009195D3 /* TaiwanTaxi AppStore-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77FC0C6D1929EBE9009195D3 /* TaiwanTaxi AppStore-Info.plist */; };
 		9600EE2115D40093008B49F8 /* MovementPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600EE1E15D40093008B49F8 /* MovementPath.m */; };
 		9600EE2215D40093008B49F8 /* PathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600EE2015D40093008B49F8 /* PathView.m */; };
 		9600EE2615D400C5008B49F8 /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600EE2415D400C5008B49F8 /* MKMapView+ZoomLevel.m */; };
@@ -1471,6 +1477,9 @@
 		77B72CFA1859C3AE0028F87B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = Library/FacebookSDK.framework; sourceTree = "<group>"; };
 		77BA394D18A387980044E1B9 /* FaceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FaceInfo.h; path = CoreData/FaceInfo.h; sourceTree = "<group>"; };
 		77BA394E18A387980044E1B9 /* FaceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FaceInfo.m; path = CoreData/FaceInfo.m; sourceTree = "<group>"; };
+		77FC0C6B1929EBE9009195D3 /* CityTaxi AppStore-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CityTaxi AppStore-Info.plist"; sourceTree = "<group>"; };
+		77FC0C6C1929EBE9009195D3 /* citytaxi dev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "citytaxi dev-Info.plist"; sourceTree = "<group>"; };
+		77FC0C6D1929EBE9009195D3 /* TaiwanTaxi AppStore-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TaiwanTaxi AppStore-Info.plist"; sourceTree = "<group>"; };
 		9600EE1D15D40093008B49F8 /* MovementPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovementPath.h; sourceTree = "<group>"; };
 		9600EE1E15D40093008B49F8 /* MovementPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovementPath.m; sourceTree = "<group>"; };
 		9600EE1F15D40093008B49F8 /* PathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathView.h; sourceTree = "<group>"; };
@@ -1520,7 +1529,6 @@
 		962311E815DA86A300F91C33 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		962311E915DA86A300F91C33 /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
 		96282E211755E1730003F73F /* 55899.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 55899.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		96282E221755E1730003F73F /* citytaxi dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "citytaxi dev-Info.plist"; path = "/Users/jason/Desktop/Projects/TaiwanTaxi/citytaxi dev-Info.plist"; sourceTree = "<absolute>"; };
 		963887531757593600E6DA88 /* DefaultCityTaxi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultCityTaxi.png; sourceTree = "<group>"; };
 		963887541757593600E6DA88 /* DefaultCityTaxi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DefaultCityTaxi@2x.png"; sourceTree = "<group>"; };
 		963887551757593600E6DA88 /* DefaultCityTaxi-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DefaultCityTaxi-568h@2x.png"; sourceTree = "<group>"; };
@@ -1572,7 +1580,6 @@
 		9665A9B01628701C007A4DEE /* tw_regions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tw_regions.plist; sourceTree = "<group>"; };
 		966B6BA6169DA69500AFCC79 /* TaiwanTaxi 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "TaiwanTaxi 5.xcdatamodel"; sourceTree = "<group>"; };
 		9674E1E516F85BF9003F4917 /* TaiwanTaxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiwanTaxi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9674E1E616F85BF9003F4917 /* TaiwanTaxi AppStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TaiwanTaxi AppStore-Info.plist"; path = "/Users/jason/Desktop/Projects/TaiwanTaxi/TaiwanTaxi AppStore-Info.plist"; sourceTree = "<absolute>"; };
 		9685AF8516C0F0E00058B7AE /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
 		9685AF8616C0F0E00058B7AE /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
 		9685AF8716C0F0E00058B7AE /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
@@ -1656,7 +1663,6 @@
 		96BBD41116C3B929007BAAF8 /* NewsMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsMessageViewController.xib; sourceTree = "<group>"; };
 		96C67BD316106868004A9C29 /* TaiwanTaxi 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "TaiwanTaxi 4.xcdatamodel"; sourceTree = "<group>"; };
 		96CA2D8A1765BF18008EA728 /* 55899.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 55899.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		96CA2D8B1765BF18008EA728 /* CityTaxi AppStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CityTaxi AppStore-Info.plist"; path = "/Users/jason/Desktop/Projects/TaiwanTaxi/CityTaxi AppStore-Info.plist"; sourceTree = "<absolute>"; };
 		96CA718415BFA5DB0011E6F0 /* areaSelector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = areaSelector.png; sourceTree = "<group>"; };
 		96CA718515BFA5DB0011E6F0 /* areaSelector@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "areaSelector@2x.png"; sourceTree = "<group>"; };
 		96CA718615BFA5DB0011E6F0 /* banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner.png; sourceTree = "<group>"; };
@@ -2090,10 +2096,10 @@
 		0A64025715B495C000BAAD20 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				77FC0C6B1929EBE9009195D3 /* CityTaxi AppStore-Info.plist */,
+				77FC0C6C1929EBE9009195D3 /* citytaxi dev-Info.plist */,
+				77FC0C6D1929EBE9009195D3 /* TaiwanTaxi AppStore-Info.plist */,
 				0A64025815B495C000BAAD20 /* TaiwanTaxi-Info.plist */,
-				9674E1E616F85BF9003F4917 /* TaiwanTaxi AppStore-Info.plist */,
-				96282E221755E1730003F73F /* citytaxi dev-Info.plist */,
-				96CA2D8B1765BF18008EA728 /* CityTaxi AppStore-Info.plist */,
 				0A64025915B495C000BAAD20 /* InfoPlist.strings */,
 				0A64025C15B495C000BAAD20 /* main.m */,
 				0A64025E15B495C000BAAD20 /* TaiwanTaxi-Prefix.pch */,
@@ -3119,6 +3125,7 @@
 				96CA71EC15BFA5DB0011E6F0 /* btnbg.png in Resources */,
 				96CA71ED15BFA5DB0011E6F0 /* btnbg@2x.png in Resources */,
 				96CA71EE15BFA5DB0011E6F0 /* cancel.png in Resources */,
+				77FC0C6E1929EBE9009195D3 /* CityTaxi AppStore-Info.plist in Resources */,
 				96CA71EF15BFA5DB0011E6F0 /* cancel@2x.png in Resources */,
 				96CA71F015BFA5DB0011E6F0 /* car@2x.png in Resources */,
 				96CA71F115BFA5DB0011E6F0 /* citySelector.png in Resources */,
@@ -3156,6 +3163,7 @@
 				96CA720515BFA5DB0011E6F0 /* radioOn.png in Resources */,
 				96CA720615BFA5DB0011E6F0 /* radioOn@2x.png in Resources */,
 				96CA720715BFA5DB0011E6F0 /* redLongBar.png in Resources */,
+				77FC0C701929EBE9009195D3 /* citytaxi dev-Info.plist in Resources */,
 				96CA720815BFA5DB0011E6F0 /* redLongBar@2x.png in Resources */,
 				7771A54618A8B4AD00FF6298 /* menuButton7.png in Resources */,
 				96CA720915BFA5DB0011E6F0 /* share.png in Resources */,
@@ -3266,6 +3274,7 @@
 				968B648316EDA9E800E8D36A /* term.txt in Resources */,
 				962180C116F8986300C8A78F /* Icon1.png in Resources */,
 				962180C216F8986300C8A78F /* Icon1@2x.png in Resources */,
+				77FC0C721929EBE9009195D3 /* TaiwanTaxi AppStore-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3501,6 +3510,7 @@
 				96AD31B617E9A7BE001EB4C7 /* icon3@2x.png in Resources */,
 				7771A4CE18A8994700FF6298 /* introDefault-568h@2x.png in Resources */,
 				9674E16716F85BF9003F4917 /* banner.png in Resources */,
+				77FC0C6F1929EBE9009195D3 /* CityTaxi AppStore-Info.plist in Resources */,
 				9674E16816F85BF9003F4917 /* banner@2x.png in Resources */,
 				9674E16916F85BF9003F4917 /* bar1.png in Resources */,
 				964540F917E57A5F00D880D1 /* SettingsViewController.xib in Resources */,
@@ -3538,6 +3548,7 @@
 				9674E18416F85BF9003F4917 /* GPS訂車.png in Resources */,
 				9674E18516F85BF9003F4917 /* GPS訂車@2x.png in Resources */,
 				9674E18616F85BF9003F4917 /* internet.png in Resources */,
+				77FC0C711929EBE9009195D3 /* citytaxi dev-Info.plist in Resources */,
 				9674E18716F85BF9003F4917 /* internet@2x.png in Resources */,
 				7771A54718A8B4AD00FF6298 /* menuButton7.png in Resources */,
 				9674E18816F85BF9003F4917 /* jobSeletor.png in Resources */,
@@ -3648,6 +3659,7 @@
 				962180C316F8987600C8A78F /* Icon1.png in Resources */,
 				962180C416F8987E00C8A78F /* Icon1@2x.png in Resources */,
 				753E1E3C17F2BAF600186E72 /* Icon-29.png in Resources */,
+				77FC0C731929EBE9009195D3 /* TaiwanTaxi AppStore-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
