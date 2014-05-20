@@ -33,6 +33,7 @@
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [userIDTextField release];
     [userPwdTextField release];
     [autoLogInSwitch release];

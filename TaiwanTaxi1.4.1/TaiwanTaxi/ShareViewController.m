@@ -37,6 +37,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [postMessageTextView release];
     [postImageView release];
     [postNameLabel release];

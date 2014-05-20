@@ -105,7 +105,6 @@
 
 - (void)viewDidUnload
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self setMvc:nil];
     [self setRvc:nil];
     [self setCvc:nil];

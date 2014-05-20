@@ -91,6 +91,8 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 #pragma mark - dealloc
 
 - (void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [sendBtn release];
     [nameTextField release];
     [teleTextField release];

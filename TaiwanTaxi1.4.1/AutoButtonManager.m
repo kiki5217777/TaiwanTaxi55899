@@ -32,6 +32,7 @@ static AutoButtonManager *sharedInstance = nil;
     return self;
 }
 -(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [menuArray release];
     [buttonArray release];
     [downloadArray release];
