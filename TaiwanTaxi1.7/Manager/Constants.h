@@ -158,8 +158,10 @@ extern NSString * const USER_DEFAULT_KEY_MVPN;
 extern NSString * const USER_DEFAULT_KEY_USE_MVPN;
 
 // fb
+/*
 extern NSString * const FBSessionStateChangedNotification;
 extern NSString * const SHOW_FB_SHARE_FEED_DIALOG;
+ */
 
 // ad
 extern NSString * const HOME_VIEW_TOP_BANNER_DEFAULT_AD_ID;

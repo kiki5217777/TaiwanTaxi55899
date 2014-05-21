@@ -7,7 +7,7 @@
 //
 
 #import "ShareViewController.h"
-#import <FacebookSDK/FacebookSDK.h>
+//#import <FacebookSDK/FacebookSDK.h>
 
 NSString *const kPlaceholderPostMessage = @"輸入您的訊息...";
 
@@ -271,7 +271,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 {
     [[self presentingViewController] dismissModalViewControllerAnimated:YES];
 }
-
+/*
 - (void)sessionStateChanged:(NSNotification*)notification
 {
     if (FBSession.activeSession.isOpen)
@@ -283,5 +283,5 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         self.shareButton.enabled = NO;
     }
 }
-
+*/
 @end

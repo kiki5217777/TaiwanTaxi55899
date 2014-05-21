@@ -6,7 +6,7 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import <FacebookSDK/FacebookSDK.h>
+//#import <FacebookSDK/FacebookSDK.h>
 #import <Accounts/Accounts.h>
 #import <Crashlytics/Crashlytics.h>
 #import "AppDelegate.h"
@@ -235,9 +235,10 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 //    }
     
     // To allow proper handle of user pressed home button
+    /*
     if (FBSession.activeSession.state == FBSessionStateCreatedOpening) {
         [FBSession.activeSession handleDidBecomeActive];
-    }
+    }*/
     
     // need to check if user has turned on/off the push
 //    [self processPush];
@@ -252,7 +253,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     // if the app is going away, we close the session object; this is a good idea because
     // things may be hanging off the session, that need releasing (completion block, etc.) and
     // other components in the app may be awaiting close notification in order to do cleanup
-    [FBSession.activeSession close];
+//    [FBSession.activeSession close];
 }
 
 - (void)saveContext
@@ -352,7 +353,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 }
 
 #pragma mark - handling URL
-
+/*
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
@@ -360,7 +361,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 {
     return [FBSession.activeSession handleOpenURL:url];
 }
-
+*/
 #pragma mark - push notification delegate
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
@@ -444,7 +445,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 {
     NSLog(@"Error in registration. Error: %@", err);
 }
-
+/*
 #pragma mark - facebook Login Code
 
 - (void)sessionStateChanged:(FBSession *)session
@@ -499,7 +500,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
                                                 [self sessionStateChanged:session state:status error:error];
                                             }];
 }
-
+*/
 #pragma mark - my addition
 
 - (void)presentModalViewController:(UIViewController *)modalViewController animated:(BOOL)animated

@@ -8,7 +8,6 @@
 
 #import "HomeViewController.h"
 #import "RatingViewController.h"
-#import "ShareViewController.h"
 #import "SVModalWebViewController.h"
 #import "SVWebViewController.h"
 #import "SVPlayWebViewController.h"
@@ -133,11 +132,11 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     isalertShow = false;
     
     // -------------------- notif --------------------
-    
+    /*
     [self.notifCenter addObserver:self
                          selector:@selector(showFbShareDialog)
                              name:SHOW_FB_SHARE_FEED_DIALOG
-                           object:nil];
+                           object:nil];*/
     
     [self.notifCenter addObserver:self
                          selector:@selector(handleOrderSuccessfulNotif:)
@@ -1120,6 +1119,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 -(void)removeOrderKey{
     [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"currentOrderID"];
 }
+/*
 - (void)showFbShareDialog
 {
     ShareViewController *svc = [[[ShareViewController alloc] initWithNibName:@"ShareViewController"
@@ -1127,7 +1127,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [appDelegate presentModalViewController:svc animated:YES];
-}
+}*/
 
 - (void)configStatusView
 {

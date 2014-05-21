@@ -156,8 +156,10 @@ NSString * const USER_DEFAULT_KEY_MVPN = @"userDefaultMVPN";
 NSString * const USER_DEFAULT_KEY_USE_MVPN = @"userDefaultUseMVPN";
 
 // fb
+/*
 NSString * const FBSessionStateChangedNotification = @"com.facebook.FBSessionStateChangedNotification";
 NSString * const SHOW_FB_SHARE_FEED_DIALOG = @"showFBShareFeedDialog";
+*/
 
 // ad
 NSString * const HOME_VIEW_TOP_BANNER_DEFAULT_AD_ID = @"1";
