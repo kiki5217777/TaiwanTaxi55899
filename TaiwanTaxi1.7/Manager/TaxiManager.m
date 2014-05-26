@@ -235,7 +235,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     
     // production:http://124.219.2.114/proxy/config.aspx dev:http://124.219.2.117/proxy/config.aspx
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://124.219.2.114/proxy/config.aspx"]];
-//    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://124.219.2.117/proxy/config_test.aspx"]];
+//    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://124.219.2.117/proxy/config_test.aspx?ver=1"]];
     
     if(data)
     {
@@ -2971,15 +2971,17 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         
         NSLog(@"introUI object: %@", resultObject);
 //        [[NSUserDefaults standardUserDefaults]setObject:[[resultObject  objectForKey:@"PicPath"] pathExtension] forKey:@"fileType"];
+//        [self didFinishedPost:[resultObject objectForKey:@"data"]];
         [self didFinishedPost:resultObject];
         
-//        if (success) {
-//            success(responseObject);
-//        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"operation%@",operation.response);
         NSLog(@"error :%@",error);
-//        [[NSNotificationCenter defaultCenter]postNotificationName:@"getLocalImage" object:self];
+        
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:INTRO_IMG_VERSION]==nil) {
+            [[NSUserDefaults standardUserDefaults] setObject:[self StringToDate:TAXI_MENU_UI_BUTTONIMG_DOWNLOAD_ERROR_VERSION] forKey:INTRO_IMG_VERSION];
+        }
+
     }];
 }
 -(void)didFinishedPost:(NSDictionary *)json{
@@ -2995,6 +2997,10 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         NSString* _escapedUrlString = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         NSLog(@"url %@",_escapedUrlString);
         
+        if ([[[NSUserDefaults standardUserDefaults]valueForKey:INTRO_IMG_VERSION]isKindOfClass:[NSString class]]) {
+            NSString *str = [[NSUserDefaults standardUserDefaults]valueForKey:INTRO_IMG_VERSION];
+            [[NSUserDefaults standardUserDefaults]setValue:[self StringToDate:str] forKey:INTRO_IMG_VERSION];
+        }
         
         if (![self checkFolder:INTRO_IMG_FILENAME]) {
             [[NSUserDefaults standardUserDefaults]setValue:[self StringToDate:[json objectForKey:@"CreateDate"]] forKey:INTRO_IMG_VERSION];
@@ -3003,12 +3009,6 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
             
             NSDate *date1 = [[NSUserDefaults standardUserDefaults]valueForKey:INTRO_IMG_VERSION];
             NSLog(@"%@",date1);
-            
-            if ([[[NSUserDefaults standardUserDefaults]valueForKey:INTRO_IMG_VERSION]isKindOfClass:[NSString class]]) {
-                [[NSUserDefaults standardUserDefaults] removeObjectForKey:INTRO_IMG_VERSION];
-                [[NSFileManager defaultManager]removeItemAtPath:[self getFilePath:INTRO_IMG_FILENAME] error:nil];
-                return;
-            }
             
             NSDate *date2 =[self StringToDate:[json objectForKey:@"CreateDate"]];
             NSLog(@"%@",date2);
@@ -3051,21 +3051,25 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     
     NSString *path = [[[paths objectAtIndex:0] stringByAppendingPathComponent:INTRO_IMG_FILENAME] stringByAppendingPathExtension:[url pathExtension]];
     NSLog(@"introimage_update_path : %@", path);
-    
     operation.outputStream = [NSOutputStream outputStreamToFileAtPath:path append:NO];
-    //    [operation setDownloadProgressBlock:^(NSInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead)
-    //    {
-    //        progressBarView.progress = (float)totalBytesRead / totalBytesExpectedToRead;
-    //
-    //    }];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:path forKey:@"introImgLocalPath"];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:2] forKey:@"IntroImageIsDownload"];
+    /*
+    [operation setDownloadProgressBlock:^(NSInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead)
+    {
+        progressBarView.progress = (float)totalBytesRead / totalBytesExpectedToRead;
+
+    }];*/
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:1] forKey:@"IntroImageIsDownload"];
         [[NSUserDefaults standardUserDefaults]setObject:[url pathExtension] forKey:@"fileType"];
         NSLog(@"Successfully downloaded file");
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"introIMG update Error: %@", error);
-        [[NSUserDefaults standardUserDefaults] setObject:@"1997-01-17 16:25:03" forKey:INTRO_IMG_VERSION];
+        [[NSUserDefaults standardUserDefaults] setObject:[self StringToDate:TAXI_MENU_UI_BUTTONIMG_DOWNLOAD_ERROR_VERSION] forKey:INTRO_IMG_VERSION];
     }];
     
     [operation start];

@@ -100,6 +100,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"ImageIsDownload"];
         [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"MenuObject"];
         [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"ButtonObject"];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"IntroImageIsDownload"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
@@ -215,12 +216,33 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"IntroImageIsDownload"] intValue] == 2) {
+        
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"introImgLocalPath"]) {
+            
+            [[NSUserDefaults standardUserDefaults] setObject:[self StringToDate:TAXI_MENU_UI_BUTTONIMG_DOWNLOAD_ERROR_VERSION] forKey:INTRO_IMG_VERSION];
+            [[NSFileManager defaultManager]removeItemAtPath:[[NSUserDefaults standardUserDefaults] objectForKey:@"introImgLocalPath"] error:nil];
+            [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:0] forKey:@"IntroImageIsDownload"];
+        }
+        
+    }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     [[NSNotificationCenter defaultCenter]postNotificationName:@"changeHomeButtonUI" object:self];
+    NSDateFormatter * dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *downloadErrorDefaultDate = [dateFormat dateFromString:TAXI_MENU_UI_BUTTONIMG_DOWNLOAD_ERROR_VERSION];
+    
+    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] objectForKey:INTRO_IMG_VERSION]);
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"IntroImageIsDownload"] intValue] == 2 || [[[NSUserDefaults standardUserDefaults] objectForKey:INTRO_IMG_VERSION] isEqualToDate:downloadErrorDefaultDate])
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"downloadIntroImgAgain" object:nil];
+    
+    NSLog(@"introversion%@:%@",[[NSUserDefaults standardUserDefaults] objectForKey:INTRO_IMG_VERSION],[[[NSUserDefaults standardUserDefaults] objectForKey:INTRO_IMG_VERSION] class]);
+
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -228,7 +250,6 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     
-
 //    if(self.remoteNotifMsg.length)
 //    {
 //        [self showPushMsg];
@@ -241,7 +262,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     }*/
     
     // need to check if user has turned on/off the push
-//    [self processPush];
+    [self processPush];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

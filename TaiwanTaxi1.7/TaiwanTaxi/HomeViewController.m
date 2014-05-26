@@ -159,6 +159,10 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
                          selector:@selector(signViewPresent)
                              name:@"signPresent"
                            object:nil];
+    [self.notifCenter addObserver:self
+                         selector:@selector(downloadIntroImg)
+                             name:@"downloadIntroImgAgain"
+                           object:nil];
     
     // -------------------- view --------------------
     
@@ -176,23 +180,10 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 //    if ([self checkFolder:[self saveFacePicturePath]]) {
 //        [self.personBtn setImage:[UIImage imageWithContentsOfFile:[self saveFacePicturePath]] forState:UIControlStateNormal];
 //    }
-    
-    
     // -------------------- ad ----------------------
     
 //    [self.vponBannerView startShowAd:self.parentViewController];
 //    self.adBannerView.delegate = self;
-    //-----------------------Intro Image--------------------------------
-    //edited by kiki Huang 2013.12.30
-    NSString *type =@" ";
-    
-    if (IS_IPHONE_5) {
-        type = @"M";
-    }else
-        type = @"S";
-    NSDictionary *parameter = [NSDictionary dictionaryWithObjectsAndKeys:type,@"type", nil];
-    [self.manager taxiIntroUI:parameter];
-
     
     //---------------------TWMTA Ad--------------------------------------edited by kiki Huang 2013.12.13
     
@@ -237,7 +228,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     [self.view addSubview:rightArrow];
 
     [self changeMenuButtonUI];
-    
+    [self downloadIntroImg];
     [self handleUrlPushForHome];
     
     
@@ -442,6 +433,21 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     }
     else
         NSLog(@"db file name not exit");
+}
+
+//-----------------------Intro Image--------------------------------
+-(void)downloadIntroImg{
+
+    NSString *type =@" ";
+    
+    if (IS_IPHONE_5) {
+        type = @"M";
+    }else
+        type = @"S";
+//    NSDictionary *parameter = [NSDictionary dictionaryWithObjectsAndKeys:type,@"type",@"1",@"diffcar", nil];
+    NSDictionary *parameter = [NSDictionary dictionaryWithObjectsAndKeys:type,@"type", nil];
+//    NSLog(@"parameter %@",parameter);
+    [self.manager taxiIntroUI:parameter];
 }
 #pragma mark - user interaction
 

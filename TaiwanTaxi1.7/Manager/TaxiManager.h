@@ -260,4 +260,6 @@ typedef enum {
 - (void)taxiTicketToken:(NSString *)uesrNum
                 success:(void (^)(id JSON))success
                 failure:(void (^)(NSString *errorMessage, NSError *error))failure;
+-(BOOL)checkFolder:(NSString*) _name ;
+-(NSString *)getFilePath:(NSString*) _name;
 @end
