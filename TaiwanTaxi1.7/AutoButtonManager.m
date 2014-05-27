@@ -52,7 +52,7 @@ static AutoButtonManager *sharedInstance = nil;
     NSArray *temp1 = [[self filterObjectToGetButton:object] copy];
     NSLog(@"temp1 %@",temp1);
     [self buttnSetup:temp1];
-//    NSLog(@"temp1 %@",buttonArray);
+    NSLog(@"downloadArray %d",[downloadArray count]);
 
     if ([downloadArray count] && !isRequestOnly) {
 
@@ -278,20 +278,23 @@ static AutoButtonManager *sharedInstance = nil;
         NSLog(@"Error : %@",error);
         isdownload = TRUE;
 
-        [self downloadFailProcess:param];
+        [self downloadFailProcess];
         
-        if ([downloadArray count]) {
-            [self downloadImage:[downloadArray deQueue]];
-        }
-        else{
-            NSLog(@"result fail : %@\n%@",menuArray,buttonArray);
-            [self saveToUserDefault];
+//        if ([downloadArray count]) {
+//            [self downloadImage:[downloadArray deQueue]];
+//        }
+//        else{
             app.networkActivityIndicatorVisible = NO;
+            [menuArray removeAllObjects];
+            [buttonArray removeAllObjects];
+            [downloadArray clearQueue];
+            [self saveToUserDefault];
+        
             [[NSNotificationCenter defaultCenter]removeObserver:self name:@"DownloadImage" object:nil];
             
             //modified by kiki 2014.02.10
             [[NSNotificationCenter defaultCenter]postNotificationName:@"autoButtonDone" object:self];
-        }
+//        }
     }];
     [operation start];
 }
@@ -365,25 +368,42 @@ static AutoButtonManager *sharedInstance = nil;
 }
 
 #pragma mark - Other methods
--(void)downloadFailProcess:(NSDictionary *)failPacket{
-    NSInteger failIndex;
-    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+-(void)downloadFailProcess{
     
-    if ([failPacket objectForKey:@"MenuType"]==0) {
-        
-        failIndex = [menuArray indexOfObject:failPacket];
-        dict = [[menuArray objectAtIndex:failIndex]mutableCopy];
-        [dict setValue:[self StringToDate:TAXI_MENU_UI_BUTTONIMG_DOWNLOAD_ERROR_VERSION]  forKey:@"CreateDate"];
-        [menuArray replaceObjectAtIndex:failIndex withObject:dict];
-        
-    }else{
-        
-        failIndex = [buttonArray indexOfObject:failPacket];
-        dict = [[buttonArray objectAtIndex:failIndex]mutableCopy];
-        [dict setValue:[self StringToDate:TAXI_MENU_UI_BUTTONIMG_DOWNLOAD_ERROR_VERSION]  forKey:@"CreateDate"];
-        [buttonArray replaceObjectAtIndex:failIndex withObject:dict];
+//    NSInteger failIndex;
+//    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+//    
+//    if ([failPacket objectForKey:@"MenuType"]==0) {
+//        
+//        failIndex = [menuArray indexOfObject:failPacket];
+//        dict = [[menuArray objectAtIndex:failIndex]mutableCopy];
+//        [dict setValue:[self StringToDate:TAXI_MENU_UI_BUTTONIMG_DOWNLOAD_ERROR_VERSION]  forKey:@"CreateDate"];
+//        [menuArray replaceObjectAtIndex:failIndex withObject:dict];
+//        
+//    }else{
+//        
+//        failIndex = [buttonArray indexOfObject:failPacket];
+//        dict = [[buttonArray objectAtIndex:failIndex]mutableCopy];
+//        [dict setValue:[self StringToDate:TAXI_MENU_UI_BUTTONIMG_DOWNLOAD_ERROR_VERSION]  forKey:@"CreateDate"];
+//        [buttonArray replaceObjectAtIndex:failIndex withObject:dict];
+//    }
+//    [dict release];
+    NSLog(@"a:%@ \n b:%@",menuArray,buttonArray);
+    for (int i=0; i<[menuArray count]; i++) {
+        NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+        dict = [[menuArray objectAtIndex:i]mutableCopy];
+        [dict setValue:TAXI_MENU_UI_BUTTONIMG_DOWNLOAD_ERROR_VERSION  forKey:@"CreateDate"];
+        [menuArray replaceObjectAtIndex:i withObject:dict];
     }
-    [dict release];
+    
+    for (int i=0; i<[buttonArray count]; i++) {
+        NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+        dict = [[buttonArray objectAtIndex:i]mutableCopy];
+        [dict setValue:TAXI_MENU_UI_BUTTONIMG_DOWNLOAD_ERROR_VERSION  forKey:@"CreateDate"];
+        [buttonArray replaceObjectAtIndex:i withObject:dict];
+    }
+    NSLog(@"a:%@ \n b:%@",menuArray,buttonArray);
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 -(NSInteger)imageTypeStringToEnum:(NSString *)strVal{
