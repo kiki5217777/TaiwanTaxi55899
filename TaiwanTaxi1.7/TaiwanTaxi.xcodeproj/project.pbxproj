@@ -3760,8 +3760,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
-				CODE_SIGN_IDENTITY = "iPhone Developer: SHIH-LANG YU (W9MWHLVCQM)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SHIH-LANG YU (W9MWHLVCQM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jyun-ting Chen (KBKQ254E7J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jyun-ting Chen (KBKQ254E7J)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Library",
@@ -3789,8 +3789,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = TaiwanTaxi;
-				PROVISIONING_PROFILE = "FE592EEF-EF02-4094-AA58-86BC5C795AD1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FE592EEF-EF02-4094-AA58-86BC5C795AD1";
+				PROVISIONING_PROFILE = "c4136227-e432-4c4d-8edf-d16dd7621212";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "c4136227-e432-4c4d-8edf-d16dd7621212";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				WRAPPER_EXTENSION = app;
@@ -3802,8 +3802,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
-				CODE_SIGN_IDENTITY = "iPhone Developer: SHIH-LANG YU (W9MWHLVCQM)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SHIH-LANG YU (W9MWHLVCQM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jyun-ting Chen (KBKQ254E7J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jyun-ting Chen (KBKQ254E7J)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Library",
@@ -3828,8 +3828,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = TaiwanTaxi;
-				PROVISIONING_PROFILE = "FE592EEF-EF02-4094-AA58-86BC5C795AD1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FE592EEF-EF02-4094-AA58-86BC5C795AD1";
+				PROVISIONING_PROFILE = "c4136227-e432-4c4d-8edf-d16dd7621212";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "c4136227-e432-4c4d-8edf-d16dd7621212";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				WRAPPER_EXTENSION = app;
@@ -3841,8 +3841,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
-				CODE_SIGN_IDENTITY = "iPhone Developer: SHIH-LANG YU (W9MWHLVCQM)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SHIH-LANG YU (W9MWHLVCQM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jyun-ting Chen (KBKQ254E7J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jyun-ting Chen (KBKQ254E7J)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Library",
@@ -3867,8 +3867,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = TaiwanTaxi;
-				PROVISIONING_PROFILE = "FE592EEF-EF02-4094-AA58-86BC5C795AD1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FE592EEF-EF02-4094-AA58-86BC5C795AD1";
+				PROVISIONING_PROFILE = "c4136227-e432-4c4d-8edf-d16dd7621212";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "c4136227-e432-4c4d-8edf-d16dd7621212";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				WRAPPER_EXTENSION = app;
@@ -3916,8 +3916,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
-				CODE_SIGN_IDENTITY = "iPhone Developer: SHIH-LANG YU (W9MWHLVCQM)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SHIH-LANG YU (W9MWHLVCQM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jyun-ting Chen (KBKQ254E7J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jyun-ting Chen (KBKQ254E7J)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Library",
@@ -3942,8 +3942,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = TaiwanTaxi;
-				PROVISIONING_PROFILE = "FE592EEF-EF02-4094-AA58-86BC5C795AD1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FE592EEF-EF02-4094-AA58-86BC5C795AD1";
+				PROVISIONING_PROFILE = "c4136227-e432-4c4d-8edf-d16dd7621212";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "c4136227-e432-4c4d-8edf-d16dd7621212";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				WRAPPER_EXTENSION = app;

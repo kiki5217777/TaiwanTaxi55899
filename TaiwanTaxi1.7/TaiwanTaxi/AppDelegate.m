@@ -193,7 +193,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     
     // crash analytics
 //    [Crashlytics startWithAPIKey:@"452147fc8d1c8cb765cd470abaf87564448ce28a"];
-    [Crashlytics startWithAPIKey:@"9c29f98d878107fa70ef1f85b8f37fee55551e3a"];
+//    [Crashlytics startWithAPIKey:@"9c29f98d878107fa70ef1f85b8f37fee55551e3a"];//edited by kiki Huang
     // --------------------------------------------------------------------------------
     if ([[NSUserDefaults standardUserDefaults]valueForKey:@"DBVersion"]==nil) {
         [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"DBVersion"];

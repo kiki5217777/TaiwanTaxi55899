@@ -20,7 +20,7 @@
 	<key>CFBundleIcons~ipad</key>
 	<dict/>
 	<key>CFBundleIdentifier</key>
-	<string>tw.com.taiwantaxi.CallStation</string>
+	<string>com.bpibase.au.WorkingHoliday</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

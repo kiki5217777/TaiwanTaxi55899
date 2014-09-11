@@ -1339,6 +1339,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     int64_t delayInSeconds = 1.5;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+        
         NSDictionary *parameter = [NSDictionary dictionaryWithObjectsAndKeys:type,@"type", nil];
         [self.manager taxiMenuUIButton:parameter success:^(id JSON) {
             

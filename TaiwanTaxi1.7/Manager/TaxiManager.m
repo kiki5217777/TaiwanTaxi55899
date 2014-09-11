@@ -234,8 +234,8 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     NSLog(@"backendURL %@",self.backendURLsInfo);
     
     // production:http://124.219.2.114/proxy/config.aspx dev:http://124.219.2.117/proxy/config.aspx
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://124.219.2.114/proxy/config.aspx"]];
-//    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://124.219.2.117/proxy/config_test.aspx?ver=1"]];
+//    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://124.219.2.114/proxy/config.aspx"]];
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://124.219.2.117/proxy/config_test.aspx?ver=1"]];
     
     if(data)
     {

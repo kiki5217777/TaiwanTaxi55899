@@ -45,13 +45,15 @@ static AutoButtonManager *sharedInstance = nil;
     isdownload = FALSE;
     
     NSArray *temp = [[self filterObjectToGetMenu:object] copy];
-//    NSLog(@"temp %@",temp);
+    NSLog(@"a %@",menuArray);
     [self menuSetup:temp];
+    NSLog(@"b %@",menuArray);
     
     
     NSArray *temp1 = [[self filterObjectToGetButton:object] copy];
-    NSLog(@"temp1 %@",temp1);
+    NSLog(@"a %@",buttonArray);
     [self buttnSetup:temp1];
+    NSLog(@"b %@",buttonArray);
     NSLog(@"downloadArray %d",[downloadArray count]);
 
     if ([downloadArray count] && !isRequestOnly) {
@@ -162,6 +164,7 @@ static AutoButtonManager *sharedInstance = nil;
 
 #pragma mark - Filter data from server
 -(NSArray *)filterObjectToGetMenu:(id)object{
+    NSLog(@"menu 0: %@", [object class]);
     NSLog(@"menu 0: %@", object);
     NSString *fileType;
     NSMutableArray *resultArray = [NSMutableArray array];
@@ -171,7 +174,7 @@ static AutoButtonManager *sharedInstance = nil;
     }
     
     for (NSDictionary *dict in object) {
-//        NSLog(@"teyp %@",[[dict objectForKey:@"PicPath"] pathExtension]);
+        NSLog(@"teyp %@",[dict objectForKey:@"PicPath"]);
         fileType = [[dict objectForKey:@"PicPath"] pathExtension];
         
         NSMutableDictionary *resultDict = [[NSMutableDictionary alloc]initWithDictionary:dict];
